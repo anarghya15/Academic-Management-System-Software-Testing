@@ -56,10 +56,11 @@
 
                     <!-- Other Operators -->
                     <mutator>EXPERIMENTAL_ARGUMENT_PROPAGATION</mutator>
-
-
                 </mutators>
-    </configuration>
+                <avoidCallsTo>
+                    <avoidCallsTo>java.io.PrintStream</avoidCallsTo>
+                </avoidCallsTo>
+              </configuration>
           </plugin>
       </plugins>        
   </build>

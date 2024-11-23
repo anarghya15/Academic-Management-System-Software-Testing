@@ -1,0 +1,11 @@
+com\example\studentmanagement\Student.class
+com\example\studentmanagement\Main.class
+com\example\studentmanagement\Course.class
+com\example\studentmanagement\ManagementSystem.class
+com\example\studentmanagement\Enrollment.class
+com\example\studentmanagement\User.class
+com\example\studentmanagement\Notification.class
+com\example\studentmanagement\Payment.class
+com\example\studentmanagement\Achievement.class
+com\example\studentmanagement\FileStorage.class
+com\example\studentmanagement\UserManager.class
