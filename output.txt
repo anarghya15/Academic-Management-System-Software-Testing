@@ -1,0 +1,1020 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.example.studentmanagement:project >----------------
+[INFO] Building project 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- pitest:1.17.1:mutationCoverage (default-cli) @ project ---
+[INFO] Root dir is : D:\IIIT\CS731 - Software Testing\project
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.8.0 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from D:\IIIT\CS731 - Software Testing\project\target\classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+10:12:57 am PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+10:12:58 am PIT >> INFO : Created 11 mutation test units in pre scan
+10:12:58 am PIT >> INFO : Sending 12 test classes to minion
+10:12:58 am PIT >> INFO : Sent tests to minion
+/10:12:59 am PIT >> INFO : Calculated coverage in 1 seconds.
+10:12:59 am PIT >> INFO : Created 11 mutation test units
+\10:13:05 am PIT >> INFO : Completed in 7 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 4 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 4
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 1 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 1
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 9 Killed 1 (11%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 8
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 202 Killed 7 (3%)
+> KILLED 7 SURVIVED 10 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 185
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 11 Killed 1 (9%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 10
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 5 Killed 1 (20%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 4
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 4 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 4
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 23 Killed 5 (22%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 18
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 7 Killed 1 (14%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 6
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 57 Killed 5 (9%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 52
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 5 seconds
+--------------------------------------------------------------------------------
+> Total  : 7 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 87/579 (15%)
+>> Generated 323 mutations Killed 21 (7%)
+>> Mutations with no coverage 292. Test strength 68%
+>> Ran 39 tests (0.12 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.826 s
+[INFO] Finished at: 2024-11-22T10:13:05+05:30
+[INFO] ------------------------------------------------------------------------
+
+
+#2:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.example.studentmanagement:project >----------------
+[INFO] Building project 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- pitest:1.17.1:mutationCoverage (default-cli) @ project ---
+[INFO] Root dir is : D:\IIIT\CS731 - Software Testing\project
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.8.0 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from D:\IIIT\CS731 - Software Testing\project\target\classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+10:28:19 am PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+10:28:19 am PIT >> INFO : Created 11 mutation test units in pre scan
+10:28:19 am PIT >> INFO : Sending 12 test classes to minion
+10:28:19 am PIT >> INFO : Sent tests to minion
+|10:28:20 am PIT >> INFO : Calculated coverage in 1 seconds.
+10:28:20 am PIT >> INFO : Created 11 mutation test units
+\10:28:30 am PIT >> INFO : Completed in 11 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 4 Killed 1 (25%)
+> KILLED 1 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 1 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 1
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 9 Killed 2 (22%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 7
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 202 Killed 10 (5%)
+> KILLED 10 SURVIVED 23 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 169
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 11 Killed 2 (18%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 9
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 5 Killed 2 (40%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 3
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 4 Killed 0 (0%)
+> KILLED 0 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 3
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 23 Killed 7 (30%)
+> KILLED 7 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 16
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 7 Killed 2 (29%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 5
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 57 Killed 17 (30%)
+> KILLED 17 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 40
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 1 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 9 seconds
+--------------------------------------------------------------------------------
+> Total  : 11 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 159/579 (27%)
+>> Generated 323 mutations Killed 43 (13%)
+>> Mutations with no coverage 255. Test strength 63%
+>> Ran 81 tests (0.25 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.745 s
+[INFO] Finished at: 2024-11-22T10:28:30+05:30
+[INFO] ------------------------------------------------------------------------
+
+
+#3:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.example.studentmanagement:project >----------------
+[INFO] Building project 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- pitest:1.17.1:mutationCoverage (default-cli) @ project ---
+[INFO] Root dir is : D:\IIIT\CS731 - Software Testing\project
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.8.0 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from D:\IIIT\CS731 - Software Testing\project\target\classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+12:24:06 pm PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+12:24:06 pm PIT >> INFO : Created 11 mutation test units in pre scan
+12:24:06 pm PIT >> INFO : Sending 12 test classes to minion
+12:24:06 pm PIT >> INFO : Sent tests to minion
+/12:24:07 pm PIT >> INFO : Calculated coverage in 1 seconds.
+12:24:08 pm PIT >> INFO : Created 11 mutation test units
+\12:24:25 pm PIT >> INFO : Completed in 19 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 4 Killed 1 (25%)
+> KILLED 1 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 0
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 9 Killed 3 (33%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 6
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 202 Killed 11 (5%)
+> KILLED 11 SURVIVED 23 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 168
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 11 Killed 2 (18%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 9
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 5 Killed 3 (60%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 4 Killed 1 (25%)
+> KILLED 1 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 1
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 23 Killed 7 (30%)
+> KILLED 7 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 16
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 7 Killed 2 (29%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 5
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 57 Killed 19 (33%)
+> KILLED 19 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 38
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 1 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 17 seconds
+--------------------------------------------------------------------------------
+> Total  : 19 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 168/579 (29%)
+>> Generated 323 mutations Killed 50 (15%)
+>> Mutations with no coverage 247. Test strength 66%
+>> Ran 90 tests (0.28 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.702 s
+[INFO] Finished at: 2024-11-22T12:24:25+05:30
+[INFO] ------------------------------------------------------------------------
+
+#4:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.example.studentmanagement:project >----------------
+[INFO] Building project 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- pitest:1.17.1:mutationCoverage (default-cli) @ project ---
+[INFO] Root dir is : D:\IIIT\CS731 - Software Testing\project
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.8.0 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from D:\IIIT\CS731 - Software Testing\project\target\classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+12:30:16 pm PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+12:30:16 pm PIT >> INFO : Created 11 mutation test units in pre scan
+12:30:17 pm PIT >> INFO : Sending 12 test classes to minion
+12:30:17 pm PIT >> INFO : Sent tests to minion
+-12:30:18 pm PIT >> INFO : Calculated coverage in 1 seconds.
+12:30:18 pm PIT >> INFO : Created 11 mutation test units
+\12:30:29 pm PIT >> INFO : Completed in 13 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 4 Killed 1 (25%)
+> KILLED 1 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 0
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 9 Killed 3 (33%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 6
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 202 Killed 11 (5%)
+> KILLED 11 SURVIVED 30 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 161
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 11 Killed 2 (18%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 9
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 5 Killed 3 (60%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 4 Killed 1 (25%)
+> KILLED 1 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 1
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 23 Killed 7 (30%)
+> KILLED 7 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 14
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 7 Killed 2 (29%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 5
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 57 Killed 19 (33%)
+> KILLED 19 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 38
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 1 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 11 seconds
+--------------------------------------------------------------------------------
+> Total  : 12 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 184/579 (32%)
+>> Generated 323 mutations Killed 50 (15%)
+>> Mutations with no coverage 238. Test strength 59%
+>> Ran 98 tests (0.3 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.985 s
+[INFO] Finished at: 2024-11-22T12:30:29+05:30
+[INFO] ------------------------------------------------------------------------
+
+#5:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.example.studentmanagement:project >----------------
+[INFO] Building project 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- pitest:1.17.1:mutationCoverage (default-cli) @ project ---
+[INFO] Root dir is : D:\IIIT\CS731 - Software Testing\project
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.8.0 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from D:\IIIT\CS731 - Software Testing\project\target\classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+12:37:02 pm PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+12:37:02 pm PIT >> INFO : Created 11 mutation test units in pre scan
+12:37:03 pm PIT >> INFO : Sending 12 test classes to minion
+12:37:03 pm PIT >> INFO : Sent tests to minion
+|12:37:03 pm PIT >> INFO : Calculated coverage in 1 seconds.
+12:37:04 pm PIT >> INFO : Created 11 mutation test units
+\12:37:16 pm PIT >> INFO : Completed in 13 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 4 Killed 1 (25%)
+> KILLED 1 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 0
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 9 Killed 3 (33%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 6
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 203 Killed 14 (7%)
+> KILLED 14 SURVIVED 32 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 157
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 11 Killed 2 (18%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 9
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 5 Killed 3 (60%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 4 Killed 1 (25%)
+> KILLED 1 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 1
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 23 Killed 7 (30%)
+> KILLED 7 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 14
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 7 Killed 2 (29%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 5
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 58 Killed 20 (34%)
+> KILLED 20 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 38
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 1 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 11 seconds
+--------------------------------------------------------------------------------
+> Total  : 13 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 198/582 (34%)
+>> Generated 325 mutations Killed 54 (17%)
+>> Mutations with no coverage 234. Test strength 59%
+>> Ran 107 tests (0.33 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.544 s
+[INFO] Finished at: 2024-11-22T12:37:16+05:30
+[INFO] ------------------------------------------------------------------------
+
+#6:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.example.studentmanagement:project >----------------
+[INFO] Building project 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ project ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\IIIT\CS731 - Software Testing\project\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ project ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- pitest:1.17.1:mutationCoverage (default-cli) @ project ---
+[INFO] Root dir is : D:\IIIT\CS731 - Software Testing\project
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.8.0 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from D:\IIIT\CS731 - Software Testing\project\target\classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+2:02:05 am PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+2:02:05 am PIT >> INFO : Created 11 mutation test units in pre scan
+2:02:06 am PIT >> INFO : Sending 13 test classes to minion
+2:02:06 am PIT >> INFO : Sent tests to minion
+/2:02:08 am PIT >> INFO : Calculated coverage in 3 seconds.
+2:02:09 am PIT >> INFO : Created 11 mutation test units
+\2:02:51 am PIT >> INFO : Completed in 46 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 5 Killed 1 (20%)
+> KILLED 1 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 1
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 0
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 9 Killed 6 (67%)
+> KILLED 6 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 206 Killed 54 (26%)
+> KILLED 54 SURVIVED 90 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 62
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 11 Killed 5 (45%)
+> KILLED 5 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 5
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 5 Killed 5 (100%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 0
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 4 Killed 2 (50%)
+> KILLED 2 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 0
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 23 Killed 11 (48%)
+> KILLED 11 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 11
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 7 Killed 4 (57%)
+> KILLED 4 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 1
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 61 Killed 49 (80%)
+> KILLED 49 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 11
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 3 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 42 seconds
+--------------------------------------------------------------------------------
+> Total  : 46 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 463/614 (75%)
+>> Generated 332 mutations Killed 138 (42%)
+>> Mutations with no coverage 93. Test strength 58%
+>> Ran 688 tests (2.07 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  51.631 s
+[INFO] Finished at: 2024-11-23T02:02:51+05:30
+[INFO] ------------------------------------------------------------------------

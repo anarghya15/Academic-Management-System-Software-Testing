@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.studentmanagement.ManagementSystemTest" time="0.244" tests="28" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.studentmanagement.MainTest" time="0.396" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -56,32 +56,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testViewCoursesForStudentInvalidId" classname="com.example.studentmanagement.ManagementSystemTest" time="0.006"/>
-  <testcase name="testUpdateStudent" classname="com.example.studentmanagement.ManagementSystemTest" time="0.013"/>
-  <testcase name="testCalculateAverageGradeForCourse" classname="com.example.studentmanagement.ManagementSystemTest" time="0.007"/>
-  <testcase name="testAddStudent_InvalidEmail" classname="com.example.studentmanagement.ManagementSystemTest" time="0.006"/>
-  <testcase name="testMakePaymentInvalidInput" classname="com.example.studentmanagement.ManagementSystemTest" time="0.028"/>
-  <testcase name="testAddGrade" classname="com.example.studentmanagement.ManagementSystemTest" time="0.018"/>
-  <testcase name="testAddStudent_ValidEmail" classname="com.example.studentmanagement.ManagementSystemTest" time="0.012"/>
-  <testcase name="testAddGradeInvalidInput" classname="com.example.studentmanagement.ManagementSystemTest" time="0.012"/>
-  <testcase name="testExportDataAsTextSuccess" classname="com.example.studentmanagement.ManagementSystemTest" time="0.027"/>
-  <testcase name="testEnrollStudent_MissingPrerequisite" classname="com.example.studentmanagement.ManagementSystemTest" time="0.003"/>
-  <testcase name="testFilterCoursesByDuration" classname="com.example.studentmanagement.ManagementSystemTest" time="0.005"/>
-  <testcase name="testDeleteStudent" classname="com.example.studentmanagement.ManagementSystemTest" time="0.006"/>
-  <testcase name="testMakePayment" classname="com.example.studentmanagement.ManagementSystemTest" time="0.016"/>
-  <testcase name="testAddPrerequisiteSuccess" classname="com.example.studentmanagement.ManagementSystemTest" time="0.001"/>
-  <testcase name="testCalculateAverageGradeForCourse_NoGrades" classname="com.example.studentmanagement.ManagementSystemTest" time="0.002"/>
-  <testcase name="testAddCourse" classname="com.example.studentmanagement.ManagementSystemTest" time="0.003"/>
-  <testcase name="testViewStudentsInCourseInvalidId" classname="com.example.studentmanagement.ManagementSystemTest" time="0.001"/>
-  <testcase name="testAddPrerequisiteFailure" classname="com.example.studentmanagement.ManagementSystemTest" time="0.0"/>
-  <testcase name="testSearchCourse" classname="com.example.studentmanagement.ManagementSystemTest" time="0.001"/>
-  <testcase name="testViewStudentsInCourse" classname="com.example.studentmanagement.ManagementSystemTest" time="0.001"/>
-  <testcase name="testViewCoursesForStudent" classname="com.example.studentmanagement.ManagementSystemTest" time="0.002"/>
-  <testcase name="testSearchStudent" classname="com.example.studentmanagement.ManagementSystemTest" time="0.001"/>
-  <testcase name="testGenerateOutstandingReport" classname="com.example.studentmanagement.ManagementSystemTest" time="0.008"/>
-  <testcase name="testViewGradesForStudent" classname="com.example.studentmanagement.ManagementSystemTest" time="0.005"/>
-  <testcase name="testEnrollStudent_Success" classname="com.example.studentmanagement.ManagementSystemTest" time="0.002"/>
-  <testcase name="testViewGradesForStudentInvalidId" classname="com.example.studentmanagement.ManagementSystemTest" time="0.001"/>
-  <testcase name="testSearchStudentInvalidId" classname="com.example.studentmanagement.ManagementSystemTest" time="0.002"/>
-  <testcase name="testSearchCourseInvalidId" classname="com.example.studentmanagement.ManagementSystemTest" time="0.001"/>
+  <testcase name="testRoleBasedMenuSwitch_Admin" classname="com.example.studentmanagement.MainTest" time="0.13"/>
+  <testcase name="testInstructorLogout" classname="com.example.studentmanagement.MainTest" time="0.014"/>
+  <testcase name="testAdminLogout" classname="com.example.studentmanagement.MainTest" time="0.025"/>
+  <testcase name="testStudentMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.015"/>
+  <testcase name="testStudentMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.014"/>
+  <testcase name="testRoleBasedMenuSwitch_Instructor" classname="com.example.studentmanagement.MainTest" time="0.013"/>
+  <testcase name="testInstructorMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.015"/>
+  <testcase name="testInstructorMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.019"/>
+  <testcase name="testRoleBasedMenuSwitch_Student" classname="com.example.studentmanagement.MainTest" time="0.017"/>
+  <testcase name="testStudentLogout" classname="com.example.studentmanagement.MainTest" time="0.017"/>
+  <testcase name="testAdminMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.019"/>
+  <testcase name="testInvalidLogin" classname="com.example.studentmanagement.MainTest" time="0.021"/>
+  <testcase name="testAdminMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.024"/>
 </testsuite>

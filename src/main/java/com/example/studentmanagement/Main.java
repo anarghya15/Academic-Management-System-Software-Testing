@@ -9,6 +9,7 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -37,7 +38,7 @@ public class Main {
             if (userManager.getLoggedInUser() == null) {
                 System.out.println("\nPlease log in to continue:");
                 System.out.print("Username: ");
-                String username = scanner.nextLine();
+                String username = scanner.nextLine();                
                 System.out.print("Password: ");
                 String password = scanner.nextLine();
 
@@ -295,10 +296,18 @@ class ManagementSystem {
 
     public List<Student> getStudents() {
         return students;
+    }    
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
     }
 
     public List<Course> getCourses() {
         return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     public List<Enrollment> getEnrollments() {
@@ -315,6 +324,10 @@ class ManagementSystem {
 
     public List<Notification> getNotifications() {
         return notifications;
+    }
+    
+    public void setEnrollments(List<Enrollment> enrollments) {
+        this.enrollments = enrollments;
     }
 
     // Constructor
@@ -358,10 +371,16 @@ class ManagementSystem {
     public void addPrerequisite(Scanner scanner) {
         System.out.print("Enter Course ID: ");
         int courseId = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("Enter Prerequisite Course ID: ");
         int prerequisiteId = scanner.nextInt();
+        scanner.nextLine();
 
         Course course = findCourseById(courseId);
+        if(course == null){
+            System.out.println("Course not found!");
+            return;
+        }
         course.addPrerequisites(prerequisiteId);
         System.out.println("Prerequisite added successfully!");
     }
@@ -448,7 +467,7 @@ class ManagementSystem {
                 .forEach(e -> {
                     System.out.println("Student: " + e.getStudent().getName() +
                             ", Course: " + e.getCourse().getName() +
-                            ", Outstanding: $" + e.getCourse().getFee());
+                            ", Outstanding: $" + e.getBalanceAmt());
                 });
     }
 
@@ -465,14 +484,20 @@ class ManagementSystem {
             System.out.print("Enter new email (leave blank to keep current): ");
             String newEmail = scanner.nextLine();
 
-            if (!newName.isEmpty())
-                student.setName(newName);
-            if (!newEmail.isEmpty())
-                student.setEmail(newEmail);
+            if(!newEmail.isEmpty() && isValidEmail(newEmail)){
+                if (!newName.isEmpty())
+                    student.setName(newName);
+                if (!newEmail.isEmpty())
+                    student.setEmail(newEmail);
 
-            System.out.println("Student updated successfully!");
-            notifications.add(new Notification("Student " + newName + ", your details have been updated successfully",
-                    findStudentById(id)));
+                System.out.println("Student updated successfully!");
+                notifications.add(new Notification("Student " + newName + ", your details have been updated successfully",
+                        findStudentById(id)));
+            } else {
+                System.out.println("Invalid email, student not updated.");
+            }
+
+            
         } else {
             System.out.println("Student not found.");
         }
@@ -500,6 +525,7 @@ class ManagementSystem {
     public void filterCoursesByDuration(Scanner scanner) {
         System.out.print("Enter minimum duration (in weeks): ");
         int minDuration = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Courses with duration >= " + minDuration + " weeks:");
         for (Course course : courses) {
@@ -534,6 +560,8 @@ class ManagementSystem {
     public void searchStudent(Scanner scanner) {
         System.out.print("Enter Student ID to search: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
+
         Student student = findStudentById(id);
 
         if (student != null) {
@@ -547,6 +575,8 @@ class ManagementSystem {
     public void searchCourse(Scanner scanner) {
         System.out.print("Enter Course ID to search: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
+
         Course course = findCourseById(id);
 
         if (course != null) {
@@ -561,10 +591,13 @@ class ManagementSystem {
     public void addGrade(Scanner scanner) {
         System.out.print("Enter Student ID: ");
         int studentId = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("Enter Course ID: ");
         int courseId = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("Enter Grade: ");
         double grade = scanner.nextDouble();
+        scanner.nextLine();
 
         for (Enrollment enrollment : enrollments) {
             if (enrollment.getStudent().getId() == studentId && enrollment.getCourse().getId() == courseId) {
@@ -584,12 +617,13 @@ class ManagementSystem {
     public void calculateAverageGradeForCourse(Scanner scanner) {
         System.out.print("Enter Course ID: ");
         int courseId = scanner.nextInt();
+        scanner.nextLine();
 
         double totalGrade = 0;
         int count = 0;
 
         for (Enrollment enrollment : enrollments) {
-            if (enrollment.getCourse().getId() == courseId && enrollment.getGrade() != '\0') {
+            if (enrollment.getCourse().getId() == courseId && enrollment.getGrade() != 0) {
                 totalGrade += enrollment.getGrade();
                 count++;
             }
@@ -620,6 +654,7 @@ class ManagementSystem {
     public void viewStudentsInCourse(Scanner scanner) {
         System.out.print("Enter Course ID: ");
         int courseId = scanner.nextInt();
+        scanner.nextLine();
 
         Course course = findCourseById(courseId);
         if (course != null) {
@@ -693,7 +728,11 @@ class ManagementSystem {
 
         if (enrollment != null && !enrollment.isFeePaid()) {
             payments.add(new Payment(enrollment, amount));
-            enrollment.setFeePaid(true);
+            enrollment.setBalanceAmt(enrollment.getBalanceAmt() - amount);
+            if(enrollment.getBalanceAmt() <= 0){
+                enrollment.setBalanceAmt(0);
+                enrollment.setFeePaid(true);
+            }            
             System.out.println("Payment made successfully for " + enrollment.getCourse().getName());
             saveData();
         } else {
@@ -705,8 +744,10 @@ class ManagementSystem {
     public void enrollStudent(Scanner scanner) {
         System.out.print("Enter Student ID: ");
         int studentId = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("Enter Course ID: ");
         int courseId = scanner.nextInt();
+        scanner.nextLine();
 
         Student student = findStudentById(studentId);
         Course course = findCourseById(courseId);
@@ -769,6 +810,7 @@ class ManagementSystem {
     public void viewCoursesForStudent(Scanner scanner) {
         System.out.print("Enter Student ID: ");
         int studentId = scanner.nextInt();
+        scanner.nextLine();
 
         Student student = findStudentById(studentId);
         if (student != null) {
@@ -787,6 +829,7 @@ class ManagementSystem {
     public void viewGradesForStudent(Scanner scanner) {
         System.out.print("Enter Student ID: ");
         int studentId = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Grades for student " + studentId + ":");
         for (Enrollment enrollment : enrollments) {
@@ -795,7 +838,6 @@ class ManagementSystem {
             }
         }
     }
-
 }
 
 // Student class
@@ -908,12 +950,15 @@ class Enrollment implements Serializable {
     private Student student;
     private Course course;
     private double grade;
+    private double balanceAmt;
     private boolean feePaid;
 
     public Enrollment(int id, Student student, Course course) {
         this.id = id;
         this.student = student;
         this.course = course;
+        this.balanceAmt = course.getFee();
+        this.feePaid = false;
     }
 
     public Student getStudent() {
@@ -949,26 +994,34 @@ class Enrollment implements Serializable {
         return id;
     }
 
+    public double getBalanceAmt() {
+        return balanceAmt;
+    }
+
+    public void setBalanceAmt(double amt) {
+        this.balanceAmt = amt;
+    }
+
+    
+
 }
 
 // Payment class
 class Payment implements Serializable {
     private Enrollment enrollment;
     private double amountPaid;
+    private String date;
 
     public Payment(Enrollment enrollment, double fee) {
         this.enrollment = enrollment;
         this.amountPaid = fee;
-    }
-
-    public double getOutstandingFee() {
-        return enrollment.getCourse().getFee() - amountPaid;
+        this.date = LocalDate.now().toString();
     }
 
     @Override
     public String toString() {
         return "Payment [Student: " + enrollment.getStudent().getName() + ", Course: " + enrollment.getCourse().getName() + ", Paid: " + amountPaid
-                + "]";
+                + "Date of Payment: " + date + "]";
     }
 }
 
