@@ -2,7 +2,9 @@ package com.example.studentmanagement;
 
 import org.junit.jupiter.api.*;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
+import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
@@ -29,14 +31,14 @@ class MainTest {
     void testAdminMenuInvalidChoice() {
         simulateInput("admin\nadmin123\n99\n0\n");
         Main.main(new String[]{});
-        Assertions.assertTrue(outputStreamCaptor.toString().contains("Invalid choice."));
+        assertTrue(outputStreamCaptor.toString().contains("Invalid choice."));
     }
 
     @Test
     void testAdminMenuValidChoice() {
-        simulateInput("admin\nadmin123\n1\n1\nJohn Doe\njohndoe@gmail.com\n0\n");
+        simulateInput("admin\nadmin123\n1\n14\nPushpa\npushpa@gmail.com\n0\n");
         Main.main(new String[]{});
-        Assertions.assertTrue(outputStreamCaptor.toString().contains("Add Student"));
+        assertTrue(outputStreamCaptor.toString().contains("Student added successfully!"));
     }
 
     @Test
@@ -48,23 +50,29 @@ class MainTest {
 
     @Test
     void testInstructorMenuValidChoice() {
-        simulateInput("instructor\ninst123\n1\n1\n0\n");
+        simulateInput("instructor\ninst123\n1\n199\n0\n");
         Main.main(new String[]{});
-        Assertions.assertTrue(outputStreamCaptor.toString().contains("View Students in a course"));
+        assertTrue(outputStreamCaptor.toString().contains("Course not found."));
     }
 
     @Test
     void testStudentMenuInvalidChoice() {
         simulateInput("student\nstud123\n99\n0\n");
         Main.main(new String[]{});
-        Assertions.assertTrue(outputStreamCaptor.toString().contains("Invalid choice."));
+        assertTrue(outputStreamCaptor.toString().contains("Invalid choice."));
     }
 
     @Test
     void testStudentMenuValidChoice() {
-        simulateInput("student\nstud123\n1\n0\n");
+        ManagementSystem system = new ManagementSystem();
+        system.loadData();
+        system.getCourses().add(new Course(1, "RS", 10, 1000, new ArrayList<>()));
+        system.getStudents().add(new Student(1, "Anarghya", "anarghya@gmail.com"));
+        system.saveData();
+
+        simulateInput("student\nstud123\n5\n1\n1\n0\n");
         Main.main(new String[]{});
-        Assertions.assertTrue(outputStreamCaptor.toString().contains("View Notifications"));
+        assertTrue(outputStreamCaptor.toString().contains("Enrollment successful!"));
     }
 
     @Test

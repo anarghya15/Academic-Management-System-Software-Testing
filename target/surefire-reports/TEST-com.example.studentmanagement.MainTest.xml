@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.studentmanagement.MainTest" time="0.396" tests="13" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.studentmanagement.MainTest" time="0.252" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire9685383071771393057\surefirebooter-20241123020147412_3.jar C:\Users\DELL\AppData\Local\Temp\surefire9685383071771393057 2024-11-23T02-01-46_719-jvmRun1 surefire-20241123020147412_1tmp surefire_0-20241123020147412_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire12686623019992911293\surefirebooter-20241124001957324_3.jar C:\Users\DELL\AppData\Local\Temp\surefire12686623019992911293 2024-11-24T00-19-57_082-jvmRun1 surefire-20241124001957324_1tmp surefire_0-20241124001957324_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\IIIT\CS731 - Software Testing\project\target\test-classes;D:\IIIT\CS731 - Software Testing\project\target\classes;C:\Users\DELL\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.0\junit-jupiter-engine-5.8.0.jar;C:\Users\DELL\.m2\repository\org\junit\platform\junit-platform-engine\1.8.0\junit-platform-engine-1.8.0.jar;C:\Users\DELL\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\DELL\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\DELL\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\DELL\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire9685383071771393057\surefirebooter-20241123020147412_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire12686623019992911293\surefirebooter-20241124001957324_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.8+9-LTS-211"/>
@@ -56,17 +56,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testRoleBasedMenuSwitch_Admin" classname="com.example.studentmanagement.MainTest" time="0.13"/>
-  <testcase name="testInstructorLogout" classname="com.example.studentmanagement.MainTest" time="0.014"/>
-  <testcase name="testAdminLogout" classname="com.example.studentmanagement.MainTest" time="0.025"/>
-  <testcase name="testStudentMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.015"/>
-  <testcase name="testStudentMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.014"/>
-  <testcase name="testRoleBasedMenuSwitch_Instructor" classname="com.example.studentmanagement.MainTest" time="0.013"/>
-  <testcase name="testInstructorMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.015"/>
-  <testcase name="testInstructorMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.019"/>
-  <testcase name="testRoleBasedMenuSwitch_Student" classname="com.example.studentmanagement.MainTest" time="0.017"/>
-  <testcase name="testStudentLogout" classname="com.example.studentmanagement.MainTest" time="0.017"/>
-  <testcase name="testAdminMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.019"/>
-  <testcase name="testInvalidLogin" classname="com.example.studentmanagement.MainTest" time="0.021"/>
-  <testcase name="testAdminMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.024"/>
+  <testcase name="testRoleBasedMenuSwitch_Admin" classname="com.example.studentmanagement.MainTest" time="0.07"/>
+  <testcase name="testInstructorLogout" classname="com.example.studentmanagement.MainTest" time="0.009"/>
+  <testcase name="testAdminLogout" classname="com.example.studentmanagement.MainTest" time="0.023"/>
+  <testcase name="testStudentMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.021"/>
+  <testcase name="testStudentMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.012"/>
+  <testcase name="testRoleBasedMenuSwitch_Instructor" classname="com.example.studentmanagement.MainTest" time="0.01"/>
+  <testcase name="testInstructorMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.011"/>
+  <testcase name="testInstructorMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.013"/>
+  <testcase name="testRoleBasedMenuSwitch_Student" classname="com.example.studentmanagement.MainTest" time="0.009"/>
+  <testcase name="testStudentLogout" classname="com.example.studentmanagement.MainTest" time="0.012"/>
+  <testcase name="testAdminMenuInvalidChoice" classname="com.example.studentmanagement.MainTest" time="0.011"/>
+  <testcase name="testInvalidLogin" classname="com.example.studentmanagement.MainTest" time="0.009"/>
+  <testcase name="testAdminMenuValidChoice" classname="com.example.studentmanagement.MainTest" time="0.01"/>
 </testsuite>

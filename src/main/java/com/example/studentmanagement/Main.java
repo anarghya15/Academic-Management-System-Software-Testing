@@ -194,7 +194,10 @@ public class Main {
                 scanner.nextLine();
                 System.out.print("Enter Achievement Title: ");
                 String title = scanner.nextLine();
-                Student student = managementSystem.findStudentById(studentId);
+                Student student = managementSystem.getStudents().stream()
+                .filter(s-> s.getId() == studentId)
+                .findFirst()
+                .orElse(null);
                 if (student != null) {
                     managementSystem.awardAchievement(student, title);
                 } else {
@@ -362,7 +365,7 @@ class ManagementSystem {
         System.out.println("Data saved successfully.");
     }
 
-    public boolean isValidEmail(String email) {
+    private boolean isValidEmail(String email) {
         return email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$");
     }
 
@@ -467,7 +470,7 @@ class ManagementSystem {
                 .forEach(e -> {
                     System.out.println("Student: " + e.getStudent().getName() +
                             ", Course: " + e.getCourse().getName() +
-                            ", Outstanding: $" + e.getBalanceAmt());
+                            ", Outstanding: Rs." + e.getBalanceAmt());
                 });
     }
 
@@ -557,7 +560,7 @@ class ManagementSystem {
     }
 
     // Search for a student by ID
-    public void searchStudent(Scanner scanner) {
+    public Student searchStudent(Scanner scanner) {
         System.out.print("Enter Student ID to search: ");
         int id = scanner.nextInt();
         scanner.nextLine();
@@ -566,13 +569,15 @@ class ManagementSystem {
 
         if (student != null) {
             System.out.println(student);
-        } else {
-            System.out.println("Student not found.");
+            return(student);            
+        } else { 
+            System.out.println("Student not found.");           
+            return null;
         }
     }
 
     // Search for a course by ID
-    public void searchCourse(Scanner scanner) {
+    public Course searchCourse(Scanner scanner) {
         System.out.print("Enter Course ID to search: ");
         int id = scanner.nextInt();
         scanner.nextLine();
@@ -581,8 +586,10 @@ class ManagementSystem {
 
         if (course != null) {
             System.out.println(course);
+            return course;
         } else {
             System.out.println("Course not found.");
+            return null;
         }
     }
 
@@ -624,13 +631,15 @@ class ManagementSystem {
 
         for (Enrollment enrollment : enrollments) {
             if (enrollment.getCourse().getId() == courseId && enrollment.getGrade() != 0) {
-                totalGrade += enrollment.getGrade();
+                totalGrade = totalGrade + enrollment.getGrade();
                 count++;
             }
         }
 
         if (count > 0) {
-            System.out.println("Average grade for course: " + (totalGrade / count));
+            Course course = findCourseById(courseId);
+            course.setAvgGrade(totalGrade / count);
+            System.out.println("Average grade for course: " + course.getAvgGrade());
         } else {
             System.out.println("No grades available for this course.");
         }
@@ -660,7 +669,7 @@ class ManagementSystem {
         if (course != null) {
             System.out.println("Students enrolled in course " + course.getName() + ":");
             for (Enrollment enrollment : enrollments) {
-                if (enrollment.getCourse().getId() == courseId) {
+                if (enrollment.getCourse() == course) {
                     System.out.println(enrollment.getStudent());
                 }
             }
@@ -677,7 +686,7 @@ class ManagementSystem {
     }
 
     // Find a student by ID
-    public Student findStudentById(int id) {
+    private Student findStudentById(int id) {
         for (Student student : students) {
             if (student.getId() == id) {
                 return student;
@@ -734,6 +743,7 @@ class ManagementSystem {
                 enrollment.setFeePaid(true);
             }            
             System.out.println("Payment made successfully for " + enrollment.getCourse().getName());
+            notifications.add(new Notification("You have made a payment of " + amount + " for course " + enrollment.getCourse().getName(), enrollment.getStudent()));
             saveData();
         } else {
             System.out.println("Invalid Enrollment ID or fee already paid.");
@@ -776,7 +786,7 @@ class ManagementSystem {
         }
     }
 
-    public boolean hasCompletedPrerequisites(int studentId, int courseId) {
+    private boolean hasCompletedPrerequisites(int studentId, int courseId) {
         Course course = findCourseById(courseId);
         Student student = findStudentById(studentId);
     
@@ -888,6 +898,7 @@ class Course implements Serializable {
     private String name;
     private int duration;
     private double fee;
+    private double avgGrade;
     private List<Integer> prerequisites; // List of prerequisite course IDs
 
     public Course(int id, String name, int duration, double fee, List<Integer> prerequisites) {
@@ -897,6 +908,17 @@ class Course implements Serializable {
         this.fee = fee;
         this.prerequisites = prerequisites;
     }
+    
+
+    public double getAvgGrade() {
+        return avgGrade;
+    }
+
+
+    public void setAvgGrade(double avgGrade) {
+        this.avgGrade = avgGrade;
+    }
+
 
     public void setId(int id) {
         this.id = id;
