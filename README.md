@@ -6,6 +6,28 @@
 * Here we try out Mutation Testing on the Unit Tests that we wrote for the Student Management source code.
 * Concepts learned - Unit Testing, Mutation Testing
 * Tools learned - JUnit, PIT
+* Link to GitHub Repository - https://github.com/anarghya15/Academic-Management-System-Software-Testing
+
+## Mutation Testing
+
+Mutation testing is a software testing technique designed to assess the effectiveness of a test suite by introducing small, artificial changes or "mutations" to the source code. These mutations represent common programming errors such as typos, logical mistakes, or incorrect operators. The objective is to evaluate the ability of the test suite to detect and identify these mutations.
+
+A testcase can either weakly kill a mutant or strongly kill a mutant:
+* **Weak killing**: In week killing, the memory state of the program after the execution of the mutated
+statement is different from the memory state of the program when the statement was not mutated and
+executed. The output of the original and mutated version is the same in this case.
+* **Strong killing**: In strong killing, the output of the program on a test case when a statement was mutated
+and not mutated is different.
+
+Our aim here is to make robust testcases that can strongly kill all the mutants.
+
+## PIT Testing Tool
+
+* PIT (PITest) is a mutation testing tool for Java applications that helps assess the effectiveness of unit tests by introducing small changes (mutations) into the code and checking if the tests can catch those changes.
+
+* PIT runs unit tests against automatically modified versions of our application code. When the application code changes, it should produce different results and cause the unit tests to fail. If a unit test does not fail in this situation, it may indicate an issue with the test suite.
+
+* PIT generates detailed reports, which include information on the mutations, their survival (whether tests caught them), and a mutation score, which indicates the effectiveness of the tests.
 
 ## Index
 
@@ -17,6 +39,8 @@
 ## Results
 
 ![](./screenshots/image1.png)
+![](./screenshots/image2.png)
+![](./screenshots/image.png)
 
 ## Operators Used
 
@@ -109,6 +133,72 @@ Private Methods:
 ### StudentManagementSystem.java
 
 This class contains all the functionalities that student can perform in a system.
+
+Public Method:
+* **viewNotifications**: Displays all notifications for students and instructors.
+* **listAchievements**: Lists all student achievements.
+* **makePayment**: Processes a student's payment for a course and updates the balance.
+* **enrollStudent**: Enrolls a student in a course after validating prerequisites and capacity.
+* **hasCompletedPrerequisites**: Checks if a student has completed all prerequisites for a course.
+* **viewCoursesForStudent**: Lists all courses a student is enrolled in.
+* **viewGradesForStudent**: Displays all grades of a specific student.
+* **generateOutstandingReport**: Generates a report of unpaid fees for a specific student.
+
+## Entities
+
+### Achievement
+
+Members:
+* **student**: Represents the student who earned the achievement.
+* **title**: Represents the title or name of the achievement.
+
+### Course
+
+Members:
+* **id**: Unique identifier for the course.
+* **name**: Name of the course.
+* **duration**: Duration of the course in weeks/months.
+* **fee**: Cost of enrolling in the course.
+* **avgGrade**: Average grade of all students in the course.
+* **prerequisites: List of course IDs required as prerequisites.**
+
+### Enrollment
+
+Members:
+* **id**: Unique identifier for the enrollment.
+* **student**: The student associated with the enrollment.
+* **course**: The course associated with the enrollment.
+* **grade**: Grade obtained by the student in the course.
+* **balanceAmt**: Outstanding fee balance for the course.
+* **feePaid**: Indicates whether the course fee has been fully paid.
+
+### Notification
+
+Members:
+* **message**: The notification message content.
+* **student**: The student associated with the notification.
+
+### Payment
+
+Members:
+* **enrollment**: The enrollment associated with the payment.
+* **amountPaid**: The amount of money paid for the enrollment.
+* **date**: The date when the payment was made.
+
+### Student
+
+Members:
+* **id**: The unique identifier for the student.
+* **name**: The name of the student.
+* **email**: The email address of the student.
+
+### User
+
+Members:
+* **username**: The username for user authentication.
+* **password**: The password associated with the user's account.
+* **role**: The role or type of user (e.g., admin, student).
+
 
 
 
