@@ -2,7 +2,7 @@ package com.example.studentmanagement.entities;
 import java.io.Serializable;
 import java.util.List;
 
-class Course implements Serializable {
+public class Course implements Serializable {
     private int id;
     private String name;
     private int duration;

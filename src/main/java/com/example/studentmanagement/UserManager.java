@@ -1,5 +1,9 @@
 package com.example.studentmanagement;
 
+import java.util.ArrayList;
+import java.util.List;
+import com.example.studentmanagement.entities.User;
+
 class UserManager {
     private List<User> users = new ArrayList<>();
     private User loggedInUser;

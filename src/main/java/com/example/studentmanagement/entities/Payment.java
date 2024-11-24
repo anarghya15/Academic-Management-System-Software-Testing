@@ -2,7 +2,7 @@ package com.example.studentmanagement.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-class Payment implements Serializable {
+public class Payment implements Serializable {
     private Enrollment enrollment;
     private double amountPaid;
     private String date;

@@ -1,6 +1,6 @@
 package com.example.studentmanagement.entities;
 
-class User {
+public class User {
     private String username;
     private String password;
     private String role;

@@ -1,7 +1,7 @@
 package com.example.studentmanagement.entities;
 import java.io.Serializable;
 
-class Notification implements Serializable {
+public class Notification implements Serializable {
     private String message;
     private Student student;
 

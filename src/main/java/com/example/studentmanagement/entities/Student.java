@@ -1,7 +1,7 @@
 package com.example.studentmanagement.entities;
 import java.io.Serializable;
 
-class Student implements Serializable {
+public class Student implements Serializable {
     private int id;
     private String name;
     private String email;

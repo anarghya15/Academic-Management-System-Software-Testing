@@ -1,7 +1,7 @@
 package com.example.studentmanagement.entities;
 import java.io.Serializable;
 
-class Enrollment implements Serializable {
+public class Enrollment implements Serializable {
     private int id;
     private Student student;
     private Course course;

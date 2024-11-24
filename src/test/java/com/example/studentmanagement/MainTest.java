@@ -1,6 +1,10 @@
 package com.example.studentmanagement;
 
 import org.junit.jupiter.api.*;
+
+import com.example.studentmanagement.entities.Course;
+import com.example.studentmanagement.entities.Student;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -64,7 +68,7 @@ class MainTest {
 
     @Test
     void testStudentMenuValidChoice() {
-        ManagementSystem system = new ManagementSystem();
+        StudentManagementSystem system = new StudentManagementSystem();
         system.loadData();
         system.getCourses().add(new Course(1, "RS", 10, 1000, new ArrayList<>()));
         system.getStudents().add(new Student(1, "Anarghya", "anarghya@gmail.com"));
