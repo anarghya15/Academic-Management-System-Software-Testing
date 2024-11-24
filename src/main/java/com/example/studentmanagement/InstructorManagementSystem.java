@@ -17,8 +17,25 @@ public class InstructorManagementSystem {
     private List<Achievement> achievements;
     private List<Notification> notifications;
 
+    public InstructorManagementSystem(){
+        students = new ArrayList<>();        
+        courses = new ArrayList<>();
+        enrollments = new ArrayList<>();
+        payments = new ArrayList<>();
+        achievements = new ArrayList<>();
+        notifications = new ArrayList<>();
+    }
+
     public List<Student> getStudents() {
         return students;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public List<Enrollment> getEnrollments() {
+        return enrollments;
     }
 
     // Method to load data from files

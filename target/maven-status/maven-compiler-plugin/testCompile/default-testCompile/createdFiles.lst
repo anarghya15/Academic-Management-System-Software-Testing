@@ -1,2 +1,4 @@
+com\example\studentmanagement\StudentManagementSystemTest.class
+com\example\studentmanagement\AdminManagementSystemTest.class
+com\example\studentmanagement\InstructorManagementSystemTest.class
 com\example\studentmanagement\MainTest.class
-com\example\studentmanagement\ManagementSystemTest.class

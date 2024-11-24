@@ -18,7 +18,32 @@ public class AdminManagementSystem {
     private List<Enrollment> enrollments;
     private List<Payment> payments;
     private List<Achievement> achievements;
-    private List<Notification> notifications;
+    private List<Notification> notifications;   
+    
+    public AdminManagementSystem(){
+        students = new ArrayList<>();        
+        courses = new ArrayList<>();
+        enrollments = new ArrayList<>();
+        payments = new ArrayList<>();
+        achievements = new ArrayList<>();
+        notifications = new ArrayList<>();
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public List<Enrollment> getEnrollments() {
+        return enrollments;
+    }
+
+    public List<Notification> getNotifications() {
+        return notifications;
+    }
 
     // Method to load data from files
     public void loadData() {
