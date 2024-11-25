@@ -38,19 +38,32 @@ Our aim here is to make robust testcases that can strongly kill all the mutants.
 
 ## Results
 
-![](./screenshots/image1.png)
-![](./screenshots/image2.png)
-![](./screenshots/image.png)
+![Summary of mutation testing on entire project](./screenshots/image1.png)
+![Package wise test summary](./screenshots/image2.png)
+![Package wise test summary](./screenshots/packagewisesummary.png)
 
 ## Operators Used
 
 ![](./screenshots/image5.png)
 
-## Errors Found via Mutation Testing
+## Test Coverage
 
-![](./screenshots/error.png)
+### Test case covering the mutants
 
-![](./screenshots/causeoferror.png)
+![Method that was tested](./screenshots/functioncovered.png)
+
+![Test Cases for the method](./screenshots/testcases1.png)
+
+![Mutations killed](./screenshots/mutations1.png)
+
+### Test cases failing to kill the mutants
+
+![Method that was tested](./screenshots/functionnotcovered.png)
+
+![Test Cases for the method](./screenshots/testcases2.png)
+
+![Mutations not killed](./screenshots/mutations2.png)
+
 
 ## Steps To Run
 
